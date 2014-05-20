@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-echo $1
-echo $2
-echo $3
+echo BUILD_PATH:$1
+echo CACHE_DIR:$2
+echo ENV_DIR:$3
 
 set -e
 
