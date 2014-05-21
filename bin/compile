@@ -73,3 +73,11 @@ done
 if [ -e $1/$root/last_pack_release.out ]; then
   echo "Using release configuration from last framework ($framework)."
 fi
+
+# Update the PATH
+# Node hack
+status "Building runtime environment (Node hack)"
+cd $build_dir; cd ..
+root_dir=`pwd`
+mkdir -p $root_dir/.profile.d
+echo "export PATH=\"\$HOME/Application/vendor/node/bin:\$HOME/Application/bin:\$HOME/Application/node_modules/.bin:\$PATH\";" > $root_dir/.profile.d/nodejs.sh
