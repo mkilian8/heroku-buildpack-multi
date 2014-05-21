@@ -81,3 +81,4 @@ cd $build_dir; cd ..
 root_dir=`pwd`
 mkdir -p $root_dir/.profile.d
 echo "export PATH=\"\$HOME/Application/vendor/node/bin:\$HOME/Application/bin:\$HOME/Application/node_modules/.bin:\$PATH\";" > $root_dir/.profile.d/nodejs.sh
+cd $build_dir
