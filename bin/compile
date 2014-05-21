@@ -77,8 +77,9 @@ fi
 # Update the PATH
 # Node hack
 status "Building runtime environment (Node hack)"
+cur_dir=`pwd`
 cd $build_dir; cd ..
 root_dir=`pwd`
 mkdir -p $root_dir/.profile.d
 echo "export PATH=\"\$HOME/Application/vendor/node/bin:\$HOME/Application/bin:\$HOME/Application/node_modules/.bin:\$PATH\";" > $root_dir/.profile.d/nodejs.sh
-cd $build_dir
+cd $cur_dir
